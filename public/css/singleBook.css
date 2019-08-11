@@ -1,0 +1,18 @@
+.allInfo {
+    flex-basis: 100%;
+    height: fit-content;
+    text-align: justify;
+    border-bottom: none;
+}
+
+.information {
+    justify-content: space-around;
+}
+
+.annotation {
+    min-width: 300px;
+}
+
+.ads {
+    display: none;
+}
