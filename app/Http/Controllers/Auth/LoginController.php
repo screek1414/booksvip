@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -58,7 +59,6 @@ class LoginController extends Controller
         }
 
         // check if they're an existing user
-        dd($user);
         $existingUser = User::where('email', $user->email)->first();
         if ($existingUser) {
             // log them in
