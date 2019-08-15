@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\User;
+use App\AuthUser;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -59,14 +59,13 @@ class LoginController extends Controller
         }
 
         // check if they're an existing user
-        dd($user->email);
-        $existingUser = User::where('email', $user->email)->first();
+        $existingUser = AuthUser::where('email', $user->email)->first();
         if ($existingUser) {
             // log them in
             auth()->login($existingUser, true);
         } else {
             // create a new user
-            $newUser                  = new User;
+            $newUser                  = new AuthUser;
             $newUser->name            = $user->name;
             $newUser->email           = $user->email;
             $newUser->google_id       = $user->id;
