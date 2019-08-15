@@ -59,6 +59,7 @@ class LoginController extends Controller
             return redirect('/login');
         }
         // only allow people with @company.com to login
+        dd($user);
         if (explode("@", $user->email)[1] !== 'company.com') {
             echo "here3";
             //return redirect()->to('/');
