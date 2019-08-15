@@ -53,9 +53,6 @@ class LoginController extends Controller
     {
         try {
             $user = Socialite::driver('google')->user();
-        } catch (\Exception $e) {
-            return redirect('/login');
-        }
 
         // check if they're an existing user
         $existingUser = User::where('email', $user->email)->first();
@@ -74,5 +71,9 @@ class LoginController extends Controller
             auth()->login($newUser, true);
         }
         return redirect()->to('/home');
+        } catch (\Exception $e) {
+            dd($e);
+//            return redirect('/login');
+        }
     }
 }
