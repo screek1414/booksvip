@@ -59,11 +59,11 @@ class LoginController extends Controller
 
         // check if they're an existing user
         $existingUser = User::where('email', $user->email)->first();
+        dd($user);
         if ($existingUser) {
             // log them in
             auth()->login($existingUser, true);
         } else {
-            dd($user);
             // create a new user
             $newUser                  = new User;
             $newUser->name            = $user->name;
