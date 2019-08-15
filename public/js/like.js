@@ -9,6 +9,7 @@ function Like(e)
     const HTTP_REQUEST_READY_STATE = 4;
     const HTTP_REQUEST_STATUS_OK = 200;
     const HTTP_REQUEST_STATUS_UN_AUTH = 401;
+    const HTTP_REQUEST_STATUS_UN_VERIFY = 402;
     let params = {book_id: e.getAttribute('data-id')};
 
     request.open('POST', '/like');
@@ -31,6 +32,8 @@ function Like(e)
                 case HTTP_REQUEST_STATUS_UN_AUTH:
                     alert("Пожалуйста авторизуйтесь");
                     break;
+                case HTTP_REQUEST_STATUS_UN_VERIFY:
+                    alert("Подтвердите свой аккаунт")
             }
         }
     };

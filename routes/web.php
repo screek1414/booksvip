@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 
 Auth::routes(['verify' => true]);
+Route::get('/redirect', 'Auth\LoginController@redirectToProvider')->name('auth.google');
+Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -23,3 +25,23 @@ Route::get('/books', 'BookController@index');
 Route::get('/book/{id}', 'BookController@single')->name('book');
 
 Route::post('/like', 'LikeController@like');
+//
+//Auth::routes();
+//
+//Route::get('/home', 'HomeController@index')->name('home');
+//
+//Auth::routes();
+//
+//Route::get('/home', 'HomeController@index')->name('home');
+//
+//Auth::routes();
+//
+//Route::get('/home', 'HomeController@index')->name('home');
+//
+//Auth::routes();
+//
+//Route::get('/home', 'HomeController@index')->name('home');
+//
+//Auth::routes();
+//
+//Route::get('/home', 'HomeController@x')->name('home');

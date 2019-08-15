@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Book;
 use App\Repositories\BookRepository;
 use App\Repositories\LikeRepository;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -44,6 +44,9 @@ class LikeController extends Controller
         if (!Auth::check()) {
             return response()->json(['error' => 'Unauthenticated.'], 401);
         }
+//        if (User::checkVerify(Auth::id()) == null) {
+//            return response()->json(['error' => 'Unaithanticated.'], 402);
+//        }
         if (true) {
             $bookRequest = json_decode($request->getContent());
             $bookId = $bookRequest->book_id;
