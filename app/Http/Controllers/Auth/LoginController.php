@@ -64,10 +64,10 @@ class LoginController extends Controller
             // log them in
             auth()->login($existingUser, true);
         } else {
-            dd($user);
             // create a new user
             $newUser                  = new User;
             $newUser->name            = $user->name;
+            dd($user);
             $newUser->email           = $user->email;
             $newUser->google_id       = $user->id;
             $newUser->avatar          = $user->avatar;
