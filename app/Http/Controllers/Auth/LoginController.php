@@ -67,12 +67,12 @@ class LoginController extends Controller
             // create a new user
             $newUser                  = new User;
             $newUser->name            = $user->name;
-            dd($user);
             $newUser->email           = $user->email;
             $newUser->google_id       = $user->id;
             $newUser->avatar          = $user->avatar;
             $newUser->avatar_original = $user->avatar_original;
             $newUser->save();
+            dd($user);
             auth()->login($newUser, true);
         }
         return redirect()->to('/home');
