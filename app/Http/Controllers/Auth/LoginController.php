@@ -73,7 +73,6 @@ class LoginController extends Controller
             $newUser->avatar_original = $user->avatar_original;
             //User::insert()
 //            $newUser->save();
-            dd($user);
             auth()->login($newUser, true);
         }
         return redirect()->to('/home');
