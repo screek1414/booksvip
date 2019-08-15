@@ -52,6 +52,7 @@ class LoginController extends Controller
     public function handleProviderCallback()
     {
         mail('drdocy@gmail.com', 'TEST', 'begin auth');
+        exit('asdfadsf');
         try {
             $user = Socialite::driver('google')->user();
         } catch (\Exception $e) {
