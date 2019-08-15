@@ -51,28 +51,18 @@ class LoginController extends Controller
      */
     public function handleProviderCallback()
     {
-        echo "here1";
         try {
-            echo "here2";
             $user = Socialite::driver('google')->user();
         } catch (\Exception $e) {
             return redirect('/login');
         }
-        // only allow people with @company.com to login
-        dd($user);
-        if (explode("@", $user->email)[1] !== 'company.com') {
-            echo "here3";
-            //return redirect()->to('/');
-        }
+
         // check if they're an existing user
         $existingUser = User::where('email', $user->email)->first();
         if ($existingUser) {
             // log them in
-            echo "here4";
             auth()->login($existingUser, true);
         } else {
-            echo "here5";
-
             // create a new user
             $newUser                  = new User;
             $newUser->name            = $user->name;
@@ -83,6 +73,6 @@ class LoginController extends Controller
             $newUser->save();
             auth()->login($newUser, true);
         }
-        //return redirect()->to('/home');
+        return redirect()->to('/home');
     }
 }
