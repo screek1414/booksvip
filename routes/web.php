@@ -45,3 +45,7 @@ Route::post('/like', 'LikeController@like');
 //Auth::routes();
 //
 //Route::get('/home', 'HomeController@x')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
