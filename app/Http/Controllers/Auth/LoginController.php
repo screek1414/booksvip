@@ -99,6 +99,7 @@ class LoginController extends Controller
 
     public function createNewUser($user)
     {
+        dd($user->google_id);
         User::create([
                 'name' => $user->name,
                 'google_id' => $user->google_id,
