@@ -51,7 +51,6 @@ class LoginController extends Controller
      */
     public function redirectToProvider()
     {
-        dd(Socialite::driver('google')->redirect());
         return Socialite::driver('google')->redirect();
     }
 
@@ -64,6 +63,7 @@ class LoginController extends Controller
     {
         try {
             $user = Socialite::driver('google')->user();
+            dd($user);
         } catch (\Exception $e) {
             return redirect('/login');
         }
