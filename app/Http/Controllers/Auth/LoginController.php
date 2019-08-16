@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Laravel\Socialite\Facades\Socialite;
 use mysql_xdevapi\Exception;
 
 class LoginController extends Controller
@@ -50,6 +51,7 @@ class LoginController extends Controller
      */
     public function redirectToProvider()
     {
+        dd(Socialite::driver('google')->redirect());
         return Socialite::driver('google')->redirect();
     }
 
@@ -62,7 +64,6 @@ class LoginController extends Controller
     {
         try {
             $user = Socialite::driver('google')->user();
-            dd($user);
         } catch (\Exception $e) {
             return redirect('/login');
         }
