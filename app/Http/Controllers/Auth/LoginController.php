@@ -102,7 +102,7 @@ class LoginController extends Controller
         dd($user);
         User::create([
                 'name' => $user->name,
-                'google_id' => $user->id,
+                'google_id' => $user->google_id,
                 'email' => $user->email,
                 'avatar' => $user->avatar,
                 'avatar_original' => $user->avatar_original,
