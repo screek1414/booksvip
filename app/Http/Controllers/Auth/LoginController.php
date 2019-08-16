@@ -100,6 +100,7 @@ class LoginController extends Controller
 
     public function createNewUser($user)
     {
+        dd('1');
         User::create([
                 'name' => $user->name,
                 'email' => $user->email,
