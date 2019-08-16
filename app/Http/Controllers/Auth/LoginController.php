@@ -85,7 +85,6 @@ class LoginController extends Controller
             $newUser->avatar_original = $user->avatar_original;
 
             $this->createNewUser($newUser);
-            dd($newUser);
 //            User::create([
 //                'name' => $user->name,
 //                'email' => $user->email,
@@ -100,6 +99,7 @@ class LoginController extends Controller
 
     public function createNewUser($user)
     {
+        dd($user);
         User::create([
                 'name' => $user->name,
                 'google_id' => $user->id,
@@ -107,6 +107,5 @@ class LoginController extends Controller
                 'avatar' => $user->avatar,
                 'avatar_original' => $user->avatar_original,
             ]);
-        dd('1');
     }
 }
