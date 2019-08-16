@@ -102,8 +102,8 @@ class LoginController extends Controller
     {
         User::create([
                 'name' => $user->name,
-                'email' => $user->email,
                 'google_id' => $user->id,
+                'email' => $user->email,
                 'avatar' => $user->avatar,
                 'avatar_original' => $user->avatar_original,
             ]);
