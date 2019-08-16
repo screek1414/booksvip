@@ -55,8 +55,8 @@
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
-                                </button>]
-                                <a href="{{ __('google') }}"></a>
+                                </button>
+                                <a href="{{ __('google') }}"> asdasdasd </a>
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
