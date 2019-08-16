@@ -76,12 +76,18 @@ class LoginController extends Controller
         } else {
             // create a new user
             $newUser                  = new User;
-            $newUser->name            = $user->name;
-            $newUser->email           = $user->email;
-            $newUser->google_id       = $user->id;
-            $newUser->avatar          = $user->avatar;
-            $newUser->avatar_original = $user->avatar_original;
-            $newUser->save();
+//            $newUser->name            = $user->name;
+//            $newUser->email           = $user->email;
+//            $newUser->google_id       = $user->id;
+//            $newUser->avatar          = $user->avatar;
+//            $newUser->avatar_original = $user->avatar_original;
+            $newUser->create([
+                'name' => $user->name,
+                'email' => $user->email,
+                'id' => $user->id,
+                'avatar' => $user->avatar,
+                'avatar_original' => $user->avatar_original,
+            ]);
             auth()->login($newUser, true);
         }
         return redirect()->to('/home');
