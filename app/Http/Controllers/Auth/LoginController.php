@@ -100,7 +100,6 @@ class LoginController extends Controller
 
     public function createNewUser($user)
     {
-        dd('1');
         User::create([
                 'name' => $user->name,
                 'email' => $user->email,
@@ -108,5 +107,6 @@ class LoginController extends Controller
                 'avatar' => $user->avatar,
                 'avatar_original' => $user->avatar_original,
             ]);
+        dd('1');
     }
 }
