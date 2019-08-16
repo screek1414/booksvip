@@ -79,11 +79,12 @@ class LoginController extends Controller
             // create a new user
             $newUser = new User();
             $newUser->name            = $user->name;
-            dd($newUser);
             $newUser->email           = $user->email;
             $newUser->google_id       = $user->id;
             $newUser->avatar          = $user->avatar;
             $newUser->avatar_original = $user->avatar_original;
+            dd($newUser);
+
             User::create([
                 'name' => $user->name,
                 'email' => $user->email,
