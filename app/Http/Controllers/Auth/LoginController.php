@@ -84,7 +84,6 @@ class LoginController extends Controller
             $newUser->avatar          = $user->avatar;
             $newUser->avatar_original = $user->avatar_original;
 
-            dd($user);
             User::create([
                 'name' => $user->name,
                 'email' => $user->email,
@@ -93,6 +92,7 @@ class LoginController extends Controller
                 'avatar' => $user->avatar,
                 'avatar_original' => $user->avatar_original,
             ]);
+            dd($user);
             auth()->login($newUser, true);
         }
         return redirect()->to('/home');
