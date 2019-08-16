@@ -84,7 +84,7 @@ class LoginController extends Controller
             $newUser->avatar          = $user->avatar;
             $newUser->avatar_original = $user->avatar_original;
 
-            $newUser->save($newUser->attributes);
+            $this->createNewUser($newUser);
             dd($newUser);
 //            User::create([
 //                'name' => $user->name,
@@ -96,5 +96,16 @@ class LoginController extends Controller
             auth()->login($newUser, true);
         }
         return redirect()->to('/home');
+    }
+
+    public function createNewUser($user)
+    {
+        User::create([
+                'name' => $user->name,
+                'email' => $user->email,
+                'id' => $user->id,
+                'avatar' => $user->avatar,
+                'avatar_original' => $user->avatar_original,
+            ]);
     }
 }
