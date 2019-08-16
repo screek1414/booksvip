@@ -74,11 +74,11 @@ class LoginController extends Controller
 //            User::insert()
             try{
                 // your code here.
-                auth()->login($newUser, true);
+                $newUser->save();
             }catch(Exception $e){
                 dd($e);
             }
-            $newUser->save();
+            auth()->login($newUser, true);
         }
         return redirect()->to('/home');
     }
