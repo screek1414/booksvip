@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use mysql_xdevapi\Exception;
 
@@ -61,6 +62,7 @@ class LoginController extends Controller
     {
         try {
             $user = Socialite::driver('google')->user();
+            dd($user);
         } catch (\Exception $e) {
             return redirect('/login');
         }
@@ -75,14 +77,12 @@ class LoginController extends Controller
             auth()->login($existingUser, true);
         } else {
             // create a new user
-            $newUser                  = new User;
 //            $newUser->name            = $user->name;
 //            $newUser->email           = $user->email;
 //            $newUser->google_id       = $user->id;
 //            $newUser->avatar          = $user->avatar;
 //            $newUser->avatar_original = $user->avatar_original;
-            dd($newUser);
-            $newUser->create([
+            User::create([
                 'name' => $user->name,
                 'email' => $user->email,
                 'id' => $user->id,

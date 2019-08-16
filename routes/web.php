@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 Auth::routes(['verify' => true]);
-Route::get('/redirect', 'Auth\LoginController@redirectToProvider');
-Route::get('/callback', 'Auth\LoginController@handleProviderCallback')->name('google');
+Route::get('/redirect', 'Auth\LoginController@redirectToProvider')->name('google');
+Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
