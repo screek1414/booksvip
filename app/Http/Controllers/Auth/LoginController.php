@@ -71,9 +71,14 @@ class LoginController extends Controller
             $newUser->google_id       = $user->id;
             $newUser->avatar          = $user->avatar;
             $newUser->avatar_original = $user->avatar_original;
-            //User::insert()
-//            $newUser->save();
-            auth()->login($newUser, true);
+//            User::insert()
+            try{
+                // your code here.
+                auth()->login($newUser, true);
+            }catch(Exception $e){
+                dd($e);
+            }
+            $newUser->save();
         }
         return redirect()->to('/home');
     }
