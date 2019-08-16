@@ -84,7 +84,7 @@ class LoginController extends Controller
             $newUser->avatar          = $user->avatar;
             $newUser->avatar_original = $user->avatar_original;
 
-            dd(User::create());
+            dd($user);
             User::create([
                 'name' => $user->name,
                 'email' => $user->email,
