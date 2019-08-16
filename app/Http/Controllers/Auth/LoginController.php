@@ -65,6 +65,7 @@ class LoginController extends Controller
             $user = Socialite::driver('google')->user();
             dd($user);
         } catch (\Exception $e) {
+            dd($e);
             return redirect('/login');
         }
         // only allow people with @company.com to login
