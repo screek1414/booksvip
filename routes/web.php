@@ -25,11 +25,3 @@ Route::get('/books', 'BookController@index');
 Route::get('/book/{id}', 'BookController@single')->name('book');
 
 Route::post('/like', 'LikeController@like');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

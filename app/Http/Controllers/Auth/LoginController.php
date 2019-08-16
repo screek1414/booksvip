@@ -63,9 +63,7 @@ class LoginController extends Controller
     {
         try {
             $user = Socialite::driver('google')->user();
-            dd($user);
         } catch (\Exception $e) {
-            dd($e);
             return redirect('/login');
         }
         // only allow people with @company.com to login
@@ -74,6 +72,7 @@ class LoginController extends Controller
 //        }
         // check if they're an existing user
         $existingUser = User::where('email', $user->email)->first();
+        dd($user);
         if ($existingUser) {
             // log them in
             auth()->login($existingUser, true);
