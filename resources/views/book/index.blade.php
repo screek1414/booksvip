@@ -9,7 +9,7 @@
                 <div class="information">
                     <div class="image">
                         <a href="/book/{{ $book->books_id }}"><img
-                                src="{{ $book->picture }}" alt="No image"></a>
+                                src="{{ $book->image }}" alt="No image"></a>
                         <img src="" alt="">
                     </div>
 
