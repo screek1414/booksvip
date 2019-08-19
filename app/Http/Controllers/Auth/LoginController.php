@@ -80,7 +80,7 @@ class LoginController extends Controller
             $newUser = new User();
             $newUser->name            = $user->name;
             $newUser->email           = $user->email;
-            $newUser->google_id       = $user->google_id;
+            $newUser->google_id       = $user->id;
             $newUser->avatar          = $user->avatar;
             $newUser->avatar_original = $user->avatar_original;
 
