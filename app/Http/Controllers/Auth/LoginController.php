@@ -85,19 +85,8 @@ class LoginController extends Controller
             $newUser->avatar_original = $user->avatar_original;
 
             $newUser->save();
-            login($newUser, true);
+            auth()->login($newUser, true);
         }
         return redirect()->to('/home');
-    }
-
-    public function createNewUser($user)
-    {
-        User::create([
-                'name' => $user->name,
-                'google_id' => $user->google_id,
-                'email' => $user->email,
-                'avatar' => $user->avatar,
-                'avatar_original' => $user->avatar_original,
-            ]);
     }
 }
