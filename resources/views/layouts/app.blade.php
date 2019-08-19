@@ -15,10 +15,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('/public/css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/cabinet.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/index.css') }}" rel="stylesheet">
     <link href="{{ asset('public/css/media.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/singleBook.css') }}" rel="stylesheet">
+    @stack('styles')
 </head>
 <body>
     <div id="app">
