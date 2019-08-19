@@ -9,9 +9,8 @@
                 <div class="information">
                     <div class="image">
                         <a href="/book/{{ $book->books_id }}"><img
-                                src="{{ $book->image }}" alt="No image"></a>
+                                src="{{ $book->picture }}" alt="No image"></a>
                         <img src="" alt="">
-                        {{ $book->pic }}
                     </div>
 
                     <div class="annotation">
