@@ -14,27 +14,20 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    @stack('styles')
     <link href="{{ asset('/public/css/index.css') }}" rel="stylesheet">
     <link href="{{ asset('/public/css/media.css') }}" rel="stylesheet">
+    @stack('styles')
 </head>
 <body>
 <div id="app">
     <nav class="header">
-{{--        logo--}}
+        {{--        logo--}}
         <div class="header-logo">
             <a class="  " href="{{ url('/') }}">
                 {{ config('app.name', 'Books') }}
             </a>
         </div>
-{{--        search--}}
-        <div class="header-search">
-            <form class="form-inline ml-auto">
-                <input class="header-search-input" type="text" placeholder="Search" aria-label="Search">
-                <button href="#!" class="header-search-button" type="submit">Search</button>
-            </form>
-        </div>
-{{--        menu--}}
+        {{--        menu--}}
         <div class="header-nav">
             <!-- Right Side Of Navbar -->
             <ul class="header-ul">
@@ -42,11 +35,11 @@
                     <a class="header-link" href="/books">Books</a>
                 </li>
                 <!-- Authentication Links -->
-            @guest
+                @guest
                     <li class="nav-item">
                         <a class="header-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
-                @if (Route::has('register'))
+                    @if (Route::has('register'))
                         <li class="header-li">
                             <a class="header-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>

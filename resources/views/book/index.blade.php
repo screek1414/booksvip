@@ -1,19 +1,17 @@
 @extends('layouts.app')
 @push('styles')
-    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/books.css') }}" rel="stylesheet">
 @endpush
 @section('content')
-    </div>
     <div class="main">
         @foreach($books->allBooks() as $book)
-            <div class="allInfo">
+            <div class="book">
                 <div class="information">
                     <div class="image">
                         <a href="/book/{{ $book->books_id }}"><img
                                 src="{{ $book->image }}" alt="No image"></a>
-                        <img src="" alt="">
+{{--                        <img src="" alt="">--}}
                     </div>
-
                     <div class="annotation">
                         <p>
                             <span>Название:</span> {{ $book->title }}
@@ -39,6 +37,8 @@
                 </div>
             </div>
         @endforeach
+            <div class="paginate">
+                {{$books->allBooks()->links()}}
+            </div>
     </div>
-    {{$books->allBooks()->links()}}
 @endsection

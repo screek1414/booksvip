@@ -1,0 +1,45 @@
+.book {
+    display: inline-block;
+    justify-content: center;
+    width: 48%;
+    margin: 5px;
+    padding: 5px;
+}
+.pagination {
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.page-link {
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+.page-link a:hover {
+    background-color: #ced4da;
+}
+.pagination li+li {
+    border-left: 2px solid #4e555b;
+}
+.information {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.annotation {
+    text-align: center;
+    margin: 10px 0;
+}
+.image {
+    margin: 10px auto;
+    width: 160px;
+    height: 220px;
+}
+.buttons {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
