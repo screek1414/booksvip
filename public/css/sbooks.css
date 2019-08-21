@@ -6,6 +6,5 @@
 .image a img {
     width: 400px;
     height: 600px;
-    border-radius: 10px;
     box-shadow: 0px 0px 20px 5px #fefefe;
 }
