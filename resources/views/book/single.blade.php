@@ -4,7 +4,7 @@
 @endpush
 @section('content')
 <div class="main">
-    <div class="allInfo">
+    <div class="book">
         <div class="information">
             <div class="image">
                 <a href="/book/{{ $book->books_id}}"><img
