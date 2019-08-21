@@ -37,6 +37,10 @@
     width: 160px;
     height: 220px;
 }
+.image image {
+    width: 160px;
+    height: 220px;
+}
 .buttons {
     margin: 10px 0;
     display: flex;
