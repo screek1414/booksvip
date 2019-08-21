@@ -1,6 +1,7 @@
 .book {
     display: inline-block;
     justify-content: center;
+    align-content: center;
     width: 48%;
     margin: 5px;
     padding: 5px;
