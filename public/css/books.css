@@ -34,14 +34,14 @@
 }
 .image {
     margin: 10px auto;
-    width: 160px;
-    height: 220px;
+    width: 220px;
+    height: 280px;
 }
 .image a img {
-    width: 160px;
-    height: 220px;
-    border-radius: 20px;
-    box-shadow: 5px 10px 15px -5px #fefefe;
+    width: 220px;
+    height: 280px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px -10px #fefefe;
 }
 .buttons {
     margin: 10px 0;
