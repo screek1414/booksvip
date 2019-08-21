@@ -35,11 +35,11 @@
 .image {
     margin: 10px auto;
     width: 220px;
-    height: 280px;
+    height: 300px;
 }
 .image a img {
     width: 220px;
-    height: 280px;
+    height: 300px;
     border-radius: 10px;
     box-shadow: 5px 10px 15px -10px #fefefe;
 }
