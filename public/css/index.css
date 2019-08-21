@@ -1,9 +1,9 @@
 /*COLOR*/
 /*#4e555b silver 78, 85, 91*/
+
 /*
     ALL
 */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -51,8 +51,6 @@ ul {
 .header-search {
 
 }
-
-
 .header-nav {
 
 }
@@ -78,8 +76,14 @@ ul {
 main {
     display: flex;
     width: 80%;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 120px);
     margin: 10px auto;
 }
 
-
+/*
+    Footer
+*/
+footer {
+    height: 50px;
+    background-color: #fefefe;
+}

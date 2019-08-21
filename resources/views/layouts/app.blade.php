@@ -76,6 +76,9 @@
     <main>
         @yield('content')
     </main>
+    <footer>
+
+    </footer>
 </div>
 
 <!-- Scripts -->
