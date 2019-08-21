@@ -21,20 +21,20 @@
 <body>
 <div id="app">
     <nav class="header">
-{{--        logo--}}
+        {{--        logo--}}
         <div class="header-logo">
             <a class="  " href="{{ url('/') }}">
                 {{ config('app.name', 'Books') }}
             </a>
         </div>
-{{--        search--}}
+        {{--        search--}}
         <div class="header-search">
             <form class="form-inline ml-auto">
                 <input class="header-search-input" type="text" placeholder="Search" aria-label="Search">
                 <button href="#!" class="header-search-button" type="submit">Search</button>
             </form>
         </div>
-{{--        menu--}}
+        {{--        menu--}}
         <div class="header-nav">
             <!-- Right Side Of Navbar -->
             <ul class="header-ul">
@@ -42,19 +42,21 @@
                     <a class="header-link" href="/books">Books</a>
                 </li>
                 <!-- Authentication Links -->
-            @guest
+                @guest
                     <li class="nav-item">
                         <a class="header-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
-                @if (Route::has('register'))
+                    @if (Route::has('register'))
                         <li class="header-li">
                             <a class="header-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
                 @else
-                    <li id="navbarDropdown" class="header-link dropdown-toggle" href="#" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
+                    <li>
+                        <a id="navbarDropdown" class="header-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
                     </li>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"
