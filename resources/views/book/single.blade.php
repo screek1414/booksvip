@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @push('styles')
-<link href="{{ asset('oldCss') }}" rel="stylesheet">
-<link href="{{ asset('css/index.css') }}" rel="stylesheet">
+<link href="{{ asset('css/sbooks.css') }}" rel="stylesheet">
 @endpush
 @section('content')
 <div class="main">
