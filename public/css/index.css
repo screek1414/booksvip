@@ -35,6 +35,9 @@ ul {
 #app {
     min-height: 100vh;
 }
+*:focus {
+    outline: none;
+}
 
 /*
     HEADER
