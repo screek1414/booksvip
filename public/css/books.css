@@ -61,6 +61,7 @@
     justify-content: space-around;
 }
 .button-1 {
+    cursor: pointer;
     display: block;
     min-width: 125px;
     padding: 5px 10px;
