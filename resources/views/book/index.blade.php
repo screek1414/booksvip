@@ -7,7 +7,6 @@
 {{--        {{ dd($books) }}--}}
         @foreach($books->allBooks() as $book)
             <div class="book">
-                <div class="information">
                     <div class="image">
                         <a href="/book/{{ $book->books_id }}"><img
                                 src="{{ $book->image }}" alt="No image"></a>
@@ -27,7 +26,6 @@
                             <span>Стоимость:</span> {{ $book->litres_price }} р. в Лабиринте
                         </p>
                     </div>
-                </div>
                 <div class="buttons">
                     <div class="mainBtn moreDetails"><a class="button-1" href="/book/{{ $book->books_id }}">Подробней...</a></div>
                     @if ($book->checkLiked($book->like))
