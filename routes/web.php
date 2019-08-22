@@ -25,3 +25,5 @@ Route::get('/books', 'BookController@index');
 Route::get('/book/{id}', 'BookController@single')->name('book');
 
 Route::post('/like', 'LikeController@like');
+
+Route::get('/admin', 'AdminController@index');
