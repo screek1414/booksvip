@@ -30,18 +30,18 @@
         {{--        search--}}
         <div class="header-search">
             <form class="form-inline ml-auto">
-                <input class="header-search-input" type="text" placeholder="Search" aria-label="Search">
-                <button href="#!" class="header-search-button" type="submit">Search</button>
+                <input class="header-search-input" type="text" placeholder="Поиск книги..." aria-label="Search">
+                <button href="#!" class="header-search-button" type="submit"></button>
             </form>
         </div>
 {{--                menu--}}
         <div class="header-nav">
-            <a class="header-link" href="/books">Books</a>
+            <a class="header-link" href="/books">Книги</a>
             @guest
-                <a class="header-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                @if (Route::has('register'))
-                    <a class="header-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                @endif
+                <a class="header-link" href="{{ route('login') }}">Войти</a>
+{{--                @if (Route::has('register'))--}}
+{{--                    <a class="header-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
+{{--                @endif--}}
             @else
                 <div class="dropdown">
                     <button class="dropbtn">{{ Auth::user()->name }} <span class="caret"></span>
@@ -74,6 +74,7 @@
 </div>
 
 <!-- Scripts -->
+<script src="https://kit.fontawesome.com/e45ff0511c.js"></script>
 <script src="{{ asset('js/app.js') }}" defer></script>
 <script src="{{ asset('js/like.js') }}" defer></script>
 </body>

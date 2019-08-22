@@ -38,6 +38,9 @@ ul {
 *:focus {
     outline: none;
 }
+.low-font {
+    font-size: 14px;
+}
 
 /*
     HEADER
@@ -122,6 +125,10 @@ ul {
 .header-search-button:hover {
     background-color: #ced4da;
 }
+.header-search-button:before{
+      content: '\f002';
+      font-family: FontAwesome;
+  }
 /*
     Main
 */
