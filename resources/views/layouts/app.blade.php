@@ -68,6 +68,11 @@
                             @csrf
                         </form>
                     </div>
+                    @if (Auth::user()->isAdmin == 1)
+                        <li class="nav-item">
+                            <a class="header-link" href="{{ route('admin') }}">Admin</a>
+                        </li>
+                    @endif
                 @endguest
             </ul>
         </div>

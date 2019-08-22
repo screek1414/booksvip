@@ -1,4 +1,4 @@
 @extends ('layouts.noSearch')
 @section('content')
-    this is admin page
+    <h1>This is admin page</h1>
 @endsection

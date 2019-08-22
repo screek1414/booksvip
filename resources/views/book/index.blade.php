@@ -4,6 +4,7 @@
 @endpush
 @section('content')
     <div class="main">
+{{--        {{ dd($books) }}--}}
         @foreach($books->allBooks() as $book)
             <div class="book">
                 <div class="information">

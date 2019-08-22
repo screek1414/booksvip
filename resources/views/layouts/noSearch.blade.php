@@ -14,9 +14,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    @stack('styles')
     <link href="{{ asset('/public/css/index.css') }}" rel="stylesheet">
     <link href="{{ asset('/public/css/media.css') }}" rel="stylesheet">
-    @stack('styles')
 </head>
 <body>
 <div id="app">
@@ -45,10 +45,12 @@
                         </li>
                     @endif
                 @else
-                    <a id="navbarDropdown" class="header-link dropdown-toggle" href="#" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                    </a>
+                    <li>
+                        <a id="navbarDropdown" class="header-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+                    </li>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
@@ -67,6 +69,9 @@
     <main>
         @yield('content')
     </main>
+    <footer>
+
+    </footer>
 </div>
 
 <!-- Scripts -->
