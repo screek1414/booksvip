@@ -1,10 +1,16 @@
 .book {
     display: inline-block;
     justify-content: center;
-    align-content: center;
+    align-content: space-around;
     width: 48%;
     margin: 5px;
     padding: 5px;
+    border: 3px solid #fefefe;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.book:hover {
+    box-shadow: 0px 0px 10px 0px #1b1e21;
 }
 .pagination {
     justify-content: center;
