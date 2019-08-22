@@ -21,11 +21,11 @@ function Like(e)
             switch (request.status) {
                 case HTTP_REQUEST_STATUS_OK:
                     let like = +e.innerHTML.substring(10, 9);
-                    if (!e.classList.contains('red')) {
-                        e.classList.add('red');
+                    if (!e.classList.contains('active')) {
+                        e.classList.add('active');
                         e.innerHTML = 'Нравится ' + ++like;
                     } else {
-                        e.classList.remove('red');
+                        e.classList.remove('active');
                         e.innerHTML = 'Нравится ' + --like;
                     };
                     break;

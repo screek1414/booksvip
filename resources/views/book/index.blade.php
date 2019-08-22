@@ -30,9 +30,9 @@
                 <div class="buttons">
                     <div class="mainBtn moreDetails"><a class="button-1" href="/book/{{ $book->books_id }}">Подробней...</a></div>
                     @if ($book->checkLiked($book->like))
-                        <div class="button-1 mainBtn addButton red" data-id="{{ $book->books_id }}" onclick="addLike(this)">Нравится {{ $book->likes }}</div>
+                        <div class="button-1 active" data-id="{{ $book->books_id }}" onclick="addLike(this)">Нравится {{ $book->likes }}</div>
                     @else
-                        <div class="button-1 mainBtn addButton" data-id="{{ $book->books_id }}" onclick="addLike(this)">Нравится {{ $book->likes }}</div>
+                        <div class="button-1" data-id="{{ $book->books_id }}" onclick="addLike(this)">Нравится {{ $book->likes }}</div>
                     @endif
                 </div>
             </div>

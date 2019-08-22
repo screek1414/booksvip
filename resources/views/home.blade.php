@@ -14,6 +14,14 @@
                         </div>
                     @endif
                     You are logged in!
+                        <p>
+                            {{ $res->response[0]->title }}
+                            {{ $res->response[1]->title }}
+                            {{ $res->response[2]->title }}
+                            {{ $res->response[3]->title }}
+                            {{ $res->response[4]->title }}
+                            {{ $res->response[5]->title }}
+                        </p>
                 </div>
             </div>
         </div>
