@@ -1,8 +1,8 @@
 .book {
-    display: inline-block;
+    display: inline-grid;
     justify-content: center;
     align-content: space-around;
-    min-height: 350px;
+    height: 560px;
     width: 48%;
     margin: 5px;
     padding: 5px;
