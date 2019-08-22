@@ -22,9 +22,19 @@
                         <p>
                             <span>Жанр:</span> {{ $book->main_category }}
                         </p>
-                        <p>
-                            <span>Стоимость:</span> {{ $book->litres_price }} р. в Лабиринте
-                        </p>
+                        <table>
+                            <th colspan="3">Стоимость</th>
+                            <tr>
+                                <td>Лабиринт</td>
+                                <td>Читай город</td>
+                                <td>Литрес</td>
+                            </tr>
+                            <tr>
+                                <td>{{ $book->litres_price }}</td>
+                                <td>{{ $book->litres_price }}</td>
+                                <td>{{ $book->litres_price }}</td>
+                            </tr>
+                        </table>
                     </div>
                 <div class="buttons">
                     <div class="mainBtn moreDetails"><a class="button-1" href="/book/{{ $book->books_id }}">Подробней...</a></div>

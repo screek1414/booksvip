@@ -1,7 +1,7 @@
 .book {
     display: inline-grid;
     align-content: space-between;
-    height: 500px;
+    height: 550px;
     width: 48%;
     margin: 5px;
     padding: 5px;
@@ -40,6 +40,11 @@
     text-align: center;
     margin: 10px 0;
 }
+.annotation table {
+    margin: 10px 0;
+    width: 100%;
+}
+
 .image {
     margin: 10px auto;
     width: 160px;
