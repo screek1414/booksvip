@@ -74,8 +74,8 @@
 </div>
 
 <!-- Scripts -->
-<script src="https://kit.fontawesome.com/e45ff0511c.js"></script>
-<script src="{{ asset('js/app.js') }}" defer></script>
 <script src="{{ asset('js/like.js') }}" defer></script>
+<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="https://kit.fontawesome.com/e45ff0511c.js"></script>
 </body>
 </html>
