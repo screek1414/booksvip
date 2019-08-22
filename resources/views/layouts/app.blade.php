@@ -34,32 +34,21 @@
                 <button href="#!" class="header-search-button" type="submit">Search</button>
             </form>
         </div>
-        {{--        menu--}}
+{{--                menu--}}
         <div class="header-nav">
-            <!-- Right Side Of Navbar -->
-            <ul class="header-ul">
-                <li class="header-li">
-                    <a class="header-link" href="/books">Books</a>
-                </li>
-                <!-- Authentication Links -->
-                @guest
-                    <li class="nav-item">
-                        <a class="header-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                    </li>
-                    @if (Route::has('register'))
-                        <li class="header-li">
-                            <a class="header-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                    @endif
-                @else
-                    <li>
-                        <a id="navbarDropdown" class="header-link dropdown-toggle" href="#" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-                    </li>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
+            <a class="header-link" href="/books">Books</a>
+            @guest
+                <a class="header-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                @if (Route::has('register'))
+                    <a class="header-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                @endif
+            @else
+                <div class="dropdown">
+                    <button class="dropbtn">{{ Auth::user()->name }} <span class="caret"></span>
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
@@ -67,14 +56,12 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
+                        @if (Auth::user()->isAdmin == 1)
+                            <a href="{{ route('admin') }}">Admin</a>
+                        @endif
                     </div>
-                    @if (Auth::user()->isAdmin == 1)
-                        <li class="nav-item">
-                            <a class="header-link" href="{{ route('admin') }}">Admin</a>
-                        </li>
-                    @endif
-                @endguest
-            </ul>
+                </div>
+            @endguest
         </div>
     </nav>
 
