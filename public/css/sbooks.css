@@ -21,4 +21,13 @@
     margin: 10px 0;
 }
 
+/*
+    Main
+*/
+main {
+    display: flex;
+    width: 80%;
+    min-height: calc(100vh - 120px);
+    margin: 10px auto;
+}
 
