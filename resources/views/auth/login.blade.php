@@ -60,9 +60,14 @@
                         <button type="submit" class="signUp">
                             {{ __('Login') }}
                         </button>
-                        <a class="google" href="{{ route('google') }}"> Google </a>
                     </div>
                 </form>
+                <div class="login">
+                    <a class="google" href="{{ route('google') }}"><i class="fab fa-google fa-2x"></i></a>
+                    <a class="vk" href="#"><i class="fab fa-vk fa-2x"></i></a>
+                    <a class="odnoklassniki" href="#"><i class="fab fa-odnoklassniki fa-2x"></i></a>
+                    <a class="facebook" href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                </div>
                 <div class="w3layouts_more-buttn">
                     <h3>Don't Have an account..?
                         <a href="{{ route('register') }}">Login Here

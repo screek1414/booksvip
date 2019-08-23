@@ -133,7 +133,7 @@ ul {
     Main
 */
 main {
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 100px);
 }
 
 /*

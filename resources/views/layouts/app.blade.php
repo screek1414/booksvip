@@ -48,6 +48,7 @@
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
+                        <a href="/home">Home</a>
                         <a href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
