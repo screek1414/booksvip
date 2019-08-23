@@ -22,9 +22,9 @@
                             {{ $res->response[4]->title }}
                             {{ $res->response[5]->title }}
                         </p>
-                        <a href="{{ ('/email/verify') }}">Dthtasd</a>
                 </div>
             </div>
+            <a href="{{ route('verification.notice') }}">Dthtasd</a>
         </div>
     </div>
 </div>
