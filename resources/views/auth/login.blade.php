@@ -19,7 +19,17 @@
                 <img src="{{ asset('images/b11.png') }}" class="img-fluid" alt="">
             </div>
             <div class="txt-left-side">
-                <h2> Sign Up Here </h2>
+                <h2> Вход </h2>
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+                @error('email')
+                <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                @enderror
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
@@ -28,11 +38,6 @@
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                                name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                        @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
 
                     </div>
                     <div class="form-left-to-w3l">
@@ -41,24 +46,19 @@
                                class="form-control @error('password') is-invalid @enderror" name="password" required
                                autocomplete="new-password">
 
-                        @error('password')
-                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                        @enderror
                     </div>
                     <div class="main-two-w3ls">
                         <div class="left-side-forget">
                             <input type="checkbox" class="checked" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                            <span class="remenber-me">{{ __('Remember Me') }}</span>
+                            <span class="remenber-me">Запомнить меня</span>
                         </div>
                         <div class="right-side-forget">
-                            <a href="{{ route('password.request') }}" class="for">Forgot password...?</a>
+                            <a href="{{ route('password.request') }}" class="for">Забыли пароль...?</a>
                         </div>
                     </div>
                     <div class="btnn">
                         <button type="submit" class="signUp">
-                            {{ __('Login') }}
+                            Войти
                         </button>
                     </div>
                 </form>
@@ -69,9 +69,8 @@
                     <a class="facebook" href="#"><i class="fab fa-facebook fa-2x"></i></a>
                 </div>
                 <div class="w3layouts_more-buttn">
-                    <h3>Don't Have an account..?
-                        <a href="{{ route('register') }}">Login Here
-                        </a>
+                    <h3>Еще нет аккаунта..?
+                            <a href="{{ route('register') }}">Зарегистрироваться</a>
                     </h3>
                 </div>
                 <div class="clear"></div>

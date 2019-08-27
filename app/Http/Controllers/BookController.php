@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Book;
 use App\Repositories\BookRepository;
 use App\Repositories\LikeRepository;
 use Illuminate\Http\Request;
@@ -57,4 +58,24 @@ class BookController extends Controller
         ]);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
+     */
+    public function bookSearch(Request $request)
+    {
+        $search = $request->input('query');
+        if (!empty($search)) {
+            $search = $this->booksRepository->books($request);
+//            dd($search);
+//            dd($search->total());
+//            dd($search->lastPage());
+            return view('book.search', [
+                'books' => $this->booksRepository,
+                'user' => Auth::id(),
+                'search' => $search,
+            ]);
+        }
+        return redirect('/books');
+    }
 }

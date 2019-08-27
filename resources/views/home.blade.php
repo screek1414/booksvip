@@ -24,7 +24,10 @@
                         </p>
                 </div>
             </div>
-            <a href="{{ route('verification.notice') }}">Dthtasd</a>
+            <a href="{{ route('verification.notice') }}">Подтверждение почты</a><br>
+            {{ md5('qweqwe') }}
+            <br>
+            {{ md5('qweqwe') }}
         </div>
     </div>
 </div>

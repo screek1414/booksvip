@@ -456,12 +456,13 @@ h1.error {
 
 input.checked {
     position: absolute;
-    top: 3px;
+    top: 8px;
     left: 0px;
     cursor: pointer;
 }
 
 .left-side-forget {
+    display: inline-block;
     position: relative;
 }
 

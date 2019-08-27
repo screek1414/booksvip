@@ -27,10 +27,10 @@
                 {{ config('app.name', 'Books') }}
             </a>
         </div>
-        {{--        search--}}
+{{--                search--}}
         <div class="header-search">
-            <form class="form-inline ml-auto">
-                <input class="header-search-input" type="text" placeholder="Поиск книги..." aria-label="Search">
+            <form class="form-inline ml-auto" action="/search" method="get">
+                <input class="header-search-input" type="text" placeholder="Поиск книги..." aria-label="Search" name="query">
                 <button href="#!" class="header-search-button" type="submit"></button>
             </form>
         </div>
@@ -67,6 +67,7 @@
     </nav>
 
     <main>
+
         @yield('content')
     </main>
     <footer>

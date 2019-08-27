@@ -11,33 +11,42 @@
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
 }
+
 body {
     background-color: #ced4da;
     min-height: 100%;
 }
+
 body, html {
     height: 100vh;
 }
+
 a {
     text-decoration: none;
     color: #000000;
 }
+
 a:hover {
     color: #000000;
 }
+
 p {
     line-height: 1.5;
 }
+
 ul {
     display: flex;
     list-style: none;
 }
+
 #app {
     min-height: 100vh;
 }
+
 *:focus {
     outline: none;
 }
+
 .low-font {
     font-size: 14px;
 }
@@ -53,13 +62,16 @@ ul {
     height: 50px;
     background-color: #fefefe;
 }
+
 .header-logo {
     margin: 0 30px;
 
 }
+
 .header-search {
 
 }
+
 .header-nav {
     display: flex;
 }
@@ -67,15 +79,18 @@ ul {
 .header-nav {
     overflow: hidden;
 }
+
 .header-nav a {
     margin: auto;
     font-size: 16px;
     padding: 14px 16px;
     text-decoration: none;
 }
+
 .header-link:hover {
     background-color: #ced4da;
 }
+
 .dropdown .dropbtn {
     font-size: 16px;
     border: none;
@@ -84,17 +99,20 @@ ul {
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
 }
+
 .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: #ced4da;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
+
 .dropdown-content a {
     float: none;
     color: #000000;
@@ -103,18 +121,22 @@ ul {
     display: block;
     text-align: left;
 }
+
 .dropdown-content a:hover {
     background-color: #ddd;
 }
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 .header-search-input {
     border: none;
-    border-left:1px solid #ced4da;
+    border-left: 1px solid #ced4da;
     height: 50px;
     padding: 0 10px;
 }
+
 .header-search-button {
     border: none;
     border-right: 1px solid #ced4da;
@@ -122,13 +144,16 @@ ul {
     height: 50px;
     padding: 0 10px;
 }
+
 .header-search-button:hover {
     background-color: #ced4da;
 }
-.header-search-button:before{
-      content: '\f002';
-      font-family: FontAwesome;
-  }
+
+.header-search-button:before {
+    content: '\f002';
+    font-family: FontAwesome;
+}
+
 /*
     Main
 */
@@ -142,4 +167,13 @@ main {
 footer {
     height: 50px;
     background-color: #fefefe;
+}
+
+.invalid-feedback {
+    padding: 5px;
+    margin: 5px 0;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #e3342f
 }

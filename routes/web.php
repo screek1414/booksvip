@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Request;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,3 +29,5 @@ Route::get('/book/{id}', 'BookController@single')->name('book');
 Route::post('/like', 'LikeController@like');
 
 Route::get('/admin', 'AdminController@index')->name('admin');
+
+Route::get('/search', 'BookController@bookSearch');

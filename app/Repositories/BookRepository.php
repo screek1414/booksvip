@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Book;
+use http\Env\Request;
 
 /**
  * Class BookRepository
@@ -10,6 +11,7 @@ use App\Book;
  */
 class BookRepository
 {
+
     /**
      * @return mixed
      */
@@ -46,5 +48,13 @@ class BookRepository
             ->decrement('likes');
     }
 
+    /**
+     * @param $sql
+     */
+    public function books($request)
+    {
+        $a = Book::search($request->get('query'))->paginate(11);
+        return $a;
+    }
 
 }

@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Laravel\Scout\Searchable;
 
 /**
  * Class Book
@@ -11,12 +12,32 @@ use Illuminate\Support\Facades\Auth;
  */
 class Book extends Model
 {
+    use Searchable;
+
     /**
      * @var string
      */
     protected $table = 'book_base';
 
+    /**
+     * @var string
+     */
+    protected $primaryKey = 'books_id';
+
+    /**
+     * @var bool
+     */
     public $timestamps = false;
+
+
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+
+        $array = ['title', 'author', 'annotation'];
+
+        return $array;
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -51,4 +72,5 @@ class Book extends Model
         }
         return $flag;
     }
+
 }
